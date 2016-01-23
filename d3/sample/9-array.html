@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D3 Sample</title>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var data = [10, 20, 30, 40, 50];
+            
+            // 150
+            d3.select("body").append("p").text(d3.sum(data));
+            // 10
+            d3.select("body").append("p").text(d3.min(data));
+            // d3.mean
+            // d3.median
+            // d3.max
+            // d3.shuffle()
+        </script>
+    </body>
+</html>
