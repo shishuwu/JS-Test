@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D3 Sample</title>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var canvas = d3.select("body").append("svg")
+                .attr("width", 500)
+                .attr("height", 500);
+            var data = [
+                {x: 10, y: 20},
+                {x: 40, y: 60},
+                {x: 50, y: 70},
+                {x: 30, y: 20},
+                {x: 80, y: 80}
+            ];
+            
+            var group = canvas.append("g")
+                .attr("transform", "translate(100, 100)");
+            
+            
+            var r = 100;
+            var p = Math.PI * 2;
+            
+            var arc = d3.svg.arc()
+                .innerRadius(r - 20)
+                .outerRadius(r)
+                .startAngle(0)
+                .endAngle(p - 2);
+            ;
+            group.append("path")
+                .attr("d", arc);
+            
+            
+        </script>
+    </body>
+</html>
